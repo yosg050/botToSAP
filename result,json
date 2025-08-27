@@ -1,0 +1,321 @@
+{
+    "d": {
+        "results": [
+            {
+                "__metadata": {
+                    "id": "https://SAPES5.SAPDEVCENTER.COM:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC/BusinessPartnerSet('0100000163')",
+                    "uri": "https://SAPES5.SAPDEVCENTER.COM:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC/BusinessPartnerSet('0100000163')",
+                    "type": "GWSAMPLE_BASIC.BusinessPartner",
+                    "etag": "W/\"datetime'2025-08-27T04%3A56%3A49.0000000'\""
+                },
+                "Address": {
+                    "__metadata": {
+                        "type": "GWSAMPLE_BASIC.CT_Address"
+                    },
+                    "City": "Walldorf",
+                    "PostalCode": "69190",
+                    "Street": "Neurottstrasse",
+                    "Building": "16",
+                    "Country": "DE",
+                    "AddressType": "02"
+                },
+                "BusinessPartnerID": "0100000163",
+                "CompanyName": "Consumer",
+                "WebAddress": "http://www.sap.com",
+                "EmailAddress": "demo_p2009386259_es5@sap.com",
+                "PhoneNumber": "+49 455015-823673",
+                "FaxNumber": "+49 678913-695783",
+                "LegalForm": "none",
+                "CurrencyCode": "EUR",
+                "BusinessPartnerRole": "01",
+                "CreatedAt": "/Date(1756270609000)/",
+                "ChangedAt": "/Date(1756270609000)/",
+                "ToSalesOrders": {
+                    "__deferred": {
+                        "uri": "https://SAPES5.SAPDEVCENTER.COM:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC/BusinessPartnerSet('0100000163')/ToSalesOrders"
+                    }
+                },
+                "ToContacts": {
+                    "__deferred": {
+                        "uri": "https://SAPES5.SAPDEVCENTER.COM:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC/BusinessPartnerSet('0100000163')/ToContacts"
+                    }
+                },
+                "ToProducts": {
+                    "__deferred": {
+                        "uri": "https://SAPES5.SAPDEVCENTER.COM:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC/BusinessPartnerSet('0100000163')/ToProducts"
+                    }
+                }
+            },
+            {
+                "__metadata": {
+                    "id": "https://SAPES5.SAPDEVCENTER.COM:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC/BusinessPartnerSet('0100000275')",
+                    "uri": "https://SAPES5.SAPDEVCENTER.COM:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC/BusinessPartnerSet('0100000275')",
+                    "type": "GWSAMPLE_BASIC.BusinessPartner",
+                    "etag": "W/\"datetime'2025-08-27T06%3A12%3A59.0000000'\""
+                },
+                "Address": {
+                    "__metadata": {
+                        "type": "GWSAMPLE_BASIC.CT_Address"
+                    },
+                    "City": "Walldorf",
+                    "PostalCode": "69190",
+                    "Street": "Neurottstrasse",
+                    "Building": "16",
+                    "Country": "DE",
+                    "AddressType": "02"
+                },
+                "BusinessPartnerID": "0100000275",
+                "CompanyName": "Consumer",
+                "WebAddress": "http://www.sap.com",
+                "EmailAddress": "demo_s0016373312_es5@sap.com",
+                "PhoneNumber": "+49 455015-823673",
+                "FaxNumber": "+49 678913-695783",
+                "LegalForm": "none",
+                "CurrencyCode": "EUR",
+                "BusinessPartnerRole": "01",
+                "CreatedAt": "/Date(1756275179000)/",
+                "ChangedAt": "/Date(1756275179000)/",
+                "ToSalesOrders": {
+                    "__deferred": {
+                        "uri": "https://SAPES5.SAPDEVCENTER.COM:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC/BusinessPartnerSet('0100000275')/ToSalesOrders"
+                    }
+                },
+                "ToContacts": {
+                    "__deferred": {
+                        "uri": "https://SAPES5.SAPDEVCENTER.COM:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC/BusinessPartnerSet('0100000275')/ToContacts"
+                    }
+                },
+                "ToProducts": {
+                    "__deferred": {
+                        "uri": "https://SAPES5.SAPDEVCENTER.COM:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC/BusinessPartnerSet('0100000275')/ToProducts"
+                    }
+                }
+            },
+            {
+                "__metadata": {
+                    "id": "https://SAPES5.SAPDEVCENTER.COM:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC/BusinessPartnerSet('0100000369')",
+                    "uri": "https://SAPES5.SAPDEVCENTER.COM:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC/BusinessPartnerSet('0100000369')",
+                    "type": "GWSAMPLE_BASIC.BusinessPartner",
+                    "etag": "W/\"datetime'2025-08-27T07%3A38%3A04.0000000'\""
+                },
+                "Address": {
+                    "__metadata": {
+                        "type": "GWSAMPLE_BASIC.CT_Address"
+                    },
+                    "City": "Walldorf",
+                    "PostalCode": "69190",
+                    "Street": "Neurottstrasse",
+                    "Building": "16",
+                    "Country": "DE",
+                    "AddressType": "02"
+                },
+                "BusinessPartnerID": "0100000369",
+                "CompanyName": "Consumer",
+                "WebAddress": "http://www.sap.com",
+                "EmailAddress": "demo_i764493_es5@sap.com",
+                "PhoneNumber": "+49 455015-823673",
+                "FaxNumber": "+49 678913-695783",
+                "LegalForm": "none",
+                "CurrencyCode": "EUR",
+                "BusinessPartnerRole": "01",
+                "CreatedAt": "/Date(1756280284000)/",
+                "ChangedAt": "/Date(1756280284000)/",
+                "ToSalesOrders": {
+                    "__deferred": {
+                        "uri": "https://SAPES5.SAPDEVCENTER.COM:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC/BusinessPartnerSet('0100000369')/ToSalesOrders"
+                    }
+                },
+                "ToContacts": {
+                    "__deferred": {
+                        "uri": "https://SAPES5.SAPDEVCENTER.COM:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC/BusinessPartnerSet('0100000369')/ToContacts"
+                    }
+                },
+                "ToProducts": {
+                    "__deferred": {
+                        "uri": "https://SAPES5.SAPDEVCENTER.COM:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC/BusinessPartnerSet('0100000369')/ToProducts"
+                    }
+                }
+            },
+            {
+                "__metadata": {
+                    "id": "https://SAPES5.SAPDEVCENTER.COM:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC/BusinessPartnerSet('0100000379')",
+                    "uri": "https://SAPES5.SAPDEVCENTER.COM:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC/BusinessPartnerSet('0100000379')",
+                    "type": "GWSAMPLE_BASIC.BusinessPartner",
+                    "etag": "W/\"datetime'2025-08-27T07%3A47%3A22.0000000'\""
+                },
+                "Address": {
+                    "__metadata": {
+                        "type": "GWSAMPLE_BASIC.CT_Address"
+                    },
+                    "City": "Walldorf",
+                    "PostalCode": "69190",
+                    "Street": "Neurottstrasse",
+                    "Building": "16",
+                    "Country": "DE",
+                    "AddressType": "02"
+                },
+                "BusinessPartnerID": "0100000379",
+                "CompanyName": "Consumer",
+                "WebAddress": "http://www.sap.com",
+                "EmailAddress": "demo_p2010178838_es5@sap.com",
+                "PhoneNumber": "+49 455015-823673",
+                "FaxNumber": "+49 678913-695783",
+                "LegalForm": "none",
+                "CurrencyCode": "EUR",
+                "BusinessPartnerRole": "01",
+                "CreatedAt": "/Date(1756280842000)/",
+                "ChangedAt": "/Date(1756280842000)/",
+                "ToSalesOrders": {
+                    "__deferred": {
+                        "uri": "https://SAPES5.SAPDEVCENTER.COM:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC/BusinessPartnerSet('0100000379')/ToSalesOrders"
+                    }
+                },
+                "ToContacts": {
+                    "__deferred": {
+                        "uri": "https://SAPES5.SAPDEVCENTER.COM:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC/BusinessPartnerSet('0100000379')/ToContacts"
+                    }
+                },
+                "ToProducts": {
+                    "__deferred": {
+                        "uri": "https://SAPES5.SAPDEVCENTER.COM:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC/BusinessPartnerSet('0100000379')/ToProducts"
+                    }
+                }
+            },
+            {
+                "__metadata": {
+                    "id": "https://SAPES5.SAPDEVCENTER.COM:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC/BusinessPartnerSet('0100000435')",
+                    "uri": "https://SAPES5.SAPDEVCENTER.COM:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC/BusinessPartnerSet('0100000435')",
+                    "type": "GWSAMPLE_BASIC.BusinessPartner",
+                    "etag": "W/\"datetime'2025-08-27T08%3A36%3A06.0000000'\""
+                },
+                "Address": {
+                    "__metadata": {
+                        "type": "GWSAMPLE_BASIC.CT_Address"
+                    },
+                    "City": "Walldorf",
+                    "PostalCode": "69190",
+                    "Street": "Neurottstrasse",
+                    "Building": "16",
+                    "Country": "DE",
+                    "AddressType": "02"
+                },
+                "BusinessPartnerID": "0100000435",
+                "CompanyName": "Consumer",
+                "WebAddress": "http://www.sap.com",
+                "EmailAddress": "demo_s0025479799_es5@sap.com",
+                "PhoneNumber": "+49 455015-823673",
+                "FaxNumber": "+49 678913-695783",
+                "LegalForm": "none",
+                "CurrencyCode": "EUR",
+                "BusinessPartnerRole": "01",
+                "CreatedAt": "/Date(1756283766000)/",
+                "ChangedAt": "/Date(1756283766000)/",
+                "ToSalesOrders": {
+                    "__deferred": {
+                        "uri": "https://SAPES5.SAPDEVCENTER.COM:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC/BusinessPartnerSet('0100000435')/ToSalesOrders"
+                    }
+                },
+                "ToContacts": {
+                    "__deferred": {
+                        "uri": "https://SAPES5.SAPDEVCENTER.COM:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC/BusinessPartnerSet('0100000435')/ToContacts"
+                    }
+                },
+                "ToProducts": {
+                    "__deferred": {
+                        "uri": "https://SAPES5.SAPDEVCENTER.COM:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC/BusinessPartnerSet('0100000435')/ToProducts"
+                    }
+                }
+            },
+            {
+                "__metadata": {
+                    "id": "https://SAPES5.SAPDEVCENTER.COM:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC/BusinessPartnerSet('0100000000')",
+                    "uri": "https://SAPES5.SAPDEVCENTER.COM:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC/BusinessPartnerSet('0100000000')",
+                    "type": "GWSAMPLE_BASIC.BusinessPartner",
+                    "etag": "W/\"datetime'2025-08-27T03%3A35%3A23.0000000'\""
+                },
+                "Address": {
+                    "__metadata": {
+                        "type": "GWSAMPLE_BASIC.CT_Address"
+                    },
+                    "City": "Walldorf",
+                    "PostalCode": "69190",
+                    "Street": "Dietmar-Hopp-Allee",
+                    "Building": "16",
+                    "Country": "DE",
+                    "AddressType": "02"
+                },
+                "BusinessPartnerID": "0100000000",
+                "CompanyName": "SAP",
+                "WebAddress": "http://www.sap.com",
+                "EmailAddress": "customer-do.not.reply@sap.com",
+                "PhoneNumber": "0622734567",
+                "FaxNumber": "0622734004",
+                "LegalForm": "SE",
+                "CurrencyCode": "EUR",
+                "BusinessPartnerRole": "01",
+                "CreatedAt": "/Date(1756265723000)/",
+                "ChangedAt": "/Date(1756265723000)/",
+                "ToSalesOrders": {
+                    "__deferred": {
+                        "uri": "https://SAPES5.SAPDEVCENTER.COM:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC/BusinessPartnerSet('0100000000')/ToSalesOrders"
+                    }
+                },
+                "ToContacts": {
+                    "__deferred": {
+                        "uri": "https://SAPES5.SAPDEVCENTER.COM:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC/BusinessPartnerSet('0100000000')/ToContacts"
+                    }
+                },
+                "ToProducts": {
+                    "__deferred": {
+                        "uri": "https://SAPES5.SAPDEVCENTER.COM:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC/BusinessPartnerSet('0100000000')/ToProducts"
+                    }
+                }
+            },
+            {
+                "__metadata": {
+                    "id": "https://SAPES5.SAPDEVCENTER.COM:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC/BusinessPartnerSet('0100000046')",
+                    "uri": "https://SAPES5.SAPDEVCENTER.COM:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC/BusinessPartnerSet('0100000046')",
+                    "type": "GWSAMPLE_BASIC.BusinessPartner",
+                    "etag": "W/\"datetime'2025-08-27T03%3A35%3A23.0000000'\""
+                },
+                "Address": {
+                    "__metadata": {
+                        "type": "GWSAMPLE_BASIC.CT_Address"
+                    },
+                    "City": "Walldorf",
+                    "PostalCode": "69190",
+                    "Street": "Dietmar-Hopp-Allee",
+                    "Building": "16",
+                    "Country": "DE",
+                    "AddressType": "02"
+                },
+                "BusinessPartnerID": "0100000046",
+                "CompanyName": "SAP",
+                "WebAddress": "http://www.sap.com",
+                "EmailAddress": "supplier-do.not.reply@sap.com",
+                "PhoneNumber": "0622734567",
+                "FaxNumber": "0622734004",
+                "LegalForm": "SE",
+                "CurrencyCode": "EUR",
+                "BusinessPartnerRole": "02",
+                "CreatedAt": "/Date(1756265723000)/",
+                "ChangedAt": "/Date(1756265723000)/",
+                "ToSalesOrders": {
+                    "__deferred": {
+                        "uri": "https://SAPES5.SAPDEVCENTER.COM:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC/BusinessPartnerSet('0100000046')/ToSalesOrders"
+                    }
+                },
+                "ToContacts": {
+                    "__deferred": {
+                        "uri": "https://SAPES5.SAPDEVCENTER.COM:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC/BusinessPartnerSet('0100000046')/ToContacts"
+                    }
+                },
+                "ToProducts": {
+                    "__deferred": {
+                        "uri": "https://SAPES5.SAPDEVCENTER.COM:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC/BusinessPartnerSet('0100000046')/ToProducts"
+                    }
+                }
+            }
+        ]
+    }
+}
