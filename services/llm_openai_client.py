@@ -1,18 +1,20 @@
+from http.client import HTTPException
+from httpx import request
 from openai import AsyncOpenAI
-from openai.types.chat import (
-    ChatCompletionMessageParam,
-    ChatCompletionToolParam,
-)
+from openai.types.chat import ChatCompletionMessageParam, ChatCompletionToolParam
+from typing import cast, Dict, Any
 from pydantic import ValidationError
 from config import get_settings
-from typing import Dict, Any
 
-from modols.schemas import ConversationStatus, LLMToolReturn, ODataParams
+from models.schemas import ConversationStatus, LLMToolReturn, ODataParams, validate_spec
 import json
 
-from servises.llm_tools import TOOLS
+from services.llm_tools import PARAMS_SCHEMA, TOOLS
+from services.sap_client import aps_get
+from services.sap_odata_builder import build_query
 
-client = AsyncOpenAI()
+s = get_settings()
+client = AsyncOpenAI(api_key=s.API_KEY_GPT)
 
 
 SYSTEM_PROMPT = """אתה ממפה בקשות בשפה חופשית לעולם OData v2 מול BusinessPartnerSet.
@@ -59,40 +61,70 @@ async def ask_openai(user_text: str, state: ConversationStatus) -> LLMToolReturn
         },
         {"role": "user", "content": user_text},
     ]
-
-    s = get_settings()
+    tools: list[ChatCompletionToolParam] = [
+        {
+            "type": "function",
+            "function": {
+                "name": "build_odata",
+                "description": "Build OData v2 query",
+                "parameters": cast(Dict[str, Any], PARAMS_SCHEMA),
+            },
+        }
+    ]
 
     r = await client.chat.completions.create(
         model=s.OPENAI_MODEL,
         messages=messages,
-        tools=TOOLS,
+        tools=tools,
         tool_choice="auto",
         temperature=s.TEMPERATURE,
     )
-
+    print("r: ", r)
     choice = r.choices[0]
-    if choice.finish_reason == "tool_calls":
+    if choice.finish_reason == "tool_calls" and choice.message.tool_calls:
         tool_call = choice.message.tool_calls[0]
+        if tool_call.function.name != "build_odata":
+            raise HTTPException(500, detail="Unexpected tool name")
         args = json.loads(tool_call.function.arguments)
+
+        ready = bool(args.get("ready", False))
+        spec_dict = args.get("spec") or {}
         try:
-            spec = ODataParams(**args.get("spec", {}))
-            return LLMToolReturn(
-                ready=bool(args.get("ready")),
-                clarifying_question=args.get("clarifying_question"),
-                reason=args.get("reason"),
-                spec=spec,
-            )
-        except ValidationError as ve:
+            spec = ODataParams(**spec_dict)
+        except Exception as e:
             return LLMToolReturn(
                 ready=False,
-                clarifying_question=str(ve),
-                reason="Invalid OData spec",
                 spec=state.spec,
+                clarifying_question="Invalid spec format from tool.",
+                reason=str(e),
             )
-
+        errors = validate_spec(spec)
+        if errors:
+            state.last_validation_errors = errors
+            return LLMToolReturn(
+                ready=False,
+                spec=state.spec,
+                clarifying_question="; ".join(errors)[:500],
+                reason="Spec validation failed",
+            )
+        if ready:
+            state.spec = spec
+            state.status = "READY"
+            return LLMToolReturn(
+                ready=True,
+                spec=spec,
+                reason="OK",
+                clarifying_question=None,
+            )
+        return LLMToolReturn(
+            ready=False,
+            spec=state.spec,
+            clarifying_question=args.get("clarifying_question"),
+            reason=args.get("reason"),
+        )
     return LLMToolReturn(
         ready=False,
-        clarifying_question="Unknown error",
-        reason="Failed to process request",
         spec=state.spec,
+        clarifying_question="No tool call produced.",
+        reason="LLM did not call the tool",
     )

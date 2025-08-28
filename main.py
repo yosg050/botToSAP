@@ -2,12 +2,12 @@ from typing import Optional, List
 from fastapi import FastAPI, Depends, Query, Request
 import httpx
 from config import get_settings
-from modols.schemas import ConversationStatus
-from servises.llm_openai_client import ask_openai
-from servises.sap_client import ODataParams, aps_get
+from models.schemas import ConversationStatus
+from services.llm_openai_client import ask_openai
+from services.sap_client import ODataParams, aps_get
 import sys, logging
 from routes.ask import AskBody, ask_get
-from servises.sap_odata_builder import validate_spec
+# from services.sap_odata_builder import validate_spec
 
 
 app_logger = logging.getLogger("app")
@@ -20,7 +20,7 @@ if not app_logger.handlers:
     app_logger.addHandler(h)
     app_logger.propagate = False
 
-app = FastAPI(title="SAP ES5 Proxy")
+app = FastAPI(title="botToSAP – OData LLM Mapper")
 
 _CONV: dict[str, ConversationStatus] = {}  # db test
 
@@ -64,10 +64,10 @@ async def ask(
 
     # errors = validate_spec(state.spec)
 
-    if tool_ret.:
+    if tool_ret:
         state.status = "DRAFT"
         _CONV[state.conversation_id] = state
         return {
             "status": "DRAFT",
-            "clarifying_question": 
+            "clarifying_question": tool_ret.clarifying_question
         }

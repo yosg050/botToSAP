@@ -5,8 +5,8 @@ import logging
 from pydantic import BaseModel, Field, field_validator
 
 from config import get_settings
-from modols.schemas import ODataParams
-from servises.sap_odata_builder import build_query
+from models.schemas import ODataParams
+from services.sap_odata_builder import build_query
 
 
 logger = logging.getLogger("app.es5")

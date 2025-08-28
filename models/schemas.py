@@ -62,3 +62,26 @@ class ConversationStatus(BaseModel):
     status: Literal["DRAFT", "NEEDS_INFO", "READY", "SENT"] = "DRAFT"
     last_validation_errors: list[str] = Field(default_factory=list)
     history: list[Dict[str, Any]] = Field(default_factory=list)
+
+
+def validate_spec(spec: ODataParams) -> list[str]:
+    errors: list[str] = []
+    if spec.top is not None and not (1 <= spec.top <= 100):
+        errors.append("top must be between 1 and 100.")
+
+    if spec.select and any("/" in f for f in spec.select):
+        errors.append(
+            "Do not select sub-fields like Address/City; select 'Address' or omit."
+        )
+    if spec.filter:
+        bal = 0
+        for ch in spec.filter:
+            if ch == "(":
+                bal += 1
+            elif ch == ")":
+                bal -= 1
+                if bal < 0:
+                    break
+        if bal != 0:
+            errors.append("Unbalanced parentheses in $filter.")
+    return errors

@@ -1,7 +1,7 @@
 from ast import List
 from typing import Dict
 
-from modols.schemas import ODataParams
+from models.schemas import ODataParams
 
 LEGAL_FIELDS = {
     "BusinessPartnerID",
@@ -13,7 +13,7 @@ LEGAL_FIELDS = {
     "LegalForm",
     "CurrencyCode",
     "BusinessPartnerRole",
-    "Address",  # שים לב: לא Address/City ב-$select!
+    "Address",
 }
 ADDRESS_SUBFIELDS = {
     "Address/City",
@@ -22,11 +22,6 @@ ADDRESS_SUBFIELDS = {
     "Address/Building",
     "Address/Country",
 }
-
-
-# def validate_spec(spec: ODataParams) -> List[str]:
-#     errors: List[str] = []
-#     raise NotImplementedError
 
 def build_query(p: ODataParams | None) -> Dict[str, str]:
     if p is None:
@@ -52,3 +47,6 @@ def build_query(p: ODataParams | None) -> Dict[str, str]:
         q.setdefault(k, v)
     print("q: ", q)
     return q
+
+
+

@@ -1,4 +1,4 @@
-from modols.schemas import AskBody
+from models.schemas import AskBody
 
 
 async def ask_get(body: AskBody):
